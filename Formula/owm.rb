@@ -5,13 +5,13 @@
 class Owm < Formula
   desc "Library and CLI tool to create Wardley Maps"
   homepage "https://github.com/mrueg/go-wardley"
-  version "0.1.3"
+  version "0.1.4"
   license "Apache 2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mrueg/go-wardley/releases/download/v0.1.3/owm_Darwin_x86_64.tar.gz"
-      sha256 "b8be2c502872b4a3f89990dacebd066a612c208cdb981091484bcc5e82f69648"
+      url "https://github.com/mrueg/go-wardley/releases/download/v0.1.4/owm_Darwin_x86_64.tar.gz"
+      sha256 "95082140aca66c24f361ef5b354f387fea8047a3f99a66cbd7b05e2d6b5fc182"
 
       def install
         bin.install "owm"
@@ -19,8 +19,8 @@ class Owm < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mrueg/go-wardley/releases/download/v0.1.3/owm_Darwin_arm64.tar.gz"
-      sha256 "f0a858aa0d66e4c0edabdbd3b14547fb29790ae2961a3646cfdd5d900213cd9c"
+      url "https://github.com/mrueg/go-wardley/releases/download/v0.1.4/owm_Darwin_arm64.tar.gz"
+      sha256 "7e8dac2260b7d3e041506db0f8d79a2db20d3fe141566f64908f0eb236805de0"
 
       def install
         bin.install "owm"
@@ -31,16 +31,16 @@ class Owm < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/mrueg/go-wardley/releases/download/v0.1.3/owm_Linux_x86_64.tar.gz"
-      sha256 "b224dba9ae2e34d08e51fc52120104e3f23c8ac3d826e730d4d349dd56ea5321"
+      url "https://github.com/mrueg/go-wardley/releases/download/v0.1.4/owm_Linux_x86_64.tar.gz"
+      sha256 "0da74d77f30886c20ad3ca75edb05f1a79eb6d4afa7e6f202674788b58eb5c9d"
       def install
         bin.install "owm"
         generate_completions_from_executable(bin/"owm", "completion")
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/mrueg/go-wardley/releases/download/v0.1.3/owm_Linux_arm64.tar.gz"
-      sha256 "2fd409b96f9eff7919917d04e4813522817c26b81354a1d1216a6b8ac884ee8e"
+      url "https://github.com/mrueg/go-wardley/releases/download/v0.1.4/owm_Linux_arm64.tar.gz"
+      sha256 "1dca50476c1dcdeb14ce8467d54702142655bfa4675aa622e8cd166fb514ed8e"
       def install
         bin.install "owm"
         generate_completions_from_executable(bin/"owm", "completion")
