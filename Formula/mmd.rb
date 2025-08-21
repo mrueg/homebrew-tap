@@ -5,13 +5,13 @@
 class Mmd < Formula
   desc "CLI tool to create mermaid diagrams"
   homepage "https://github.com/mrueg/go-mermaid"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mrueg/go-mermaid/releases/download/v0.1.0/mmd_Darwin_x86_64.tar.gz"
-      sha256 "c989b561b5da96403a030a4b226e7b2e9bbe419abc3c7b9090946a3377af2d5b"
+      url "https://github.com/mrueg/go-mermaid/releases/download/v0.1.1/mmd_Darwin_x86_64.tar.gz"
+      sha256 "f98299ccf5372a4691d5768b6adaac86b7ec421c1482cfca702ccac5f330369f"
 
       def install
         bin.install "mmd"
@@ -19,8 +19,8 @@ class Mmd < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mrueg/go-mermaid/releases/download/v0.1.0/mmd_Darwin_arm64.tar.gz"
-      sha256 "6120f1e217f7954714ce11b2b60cde74b924e37a67a50ea49b4e7e55c1fede6f"
+      url "https://github.com/mrueg/go-mermaid/releases/download/v0.1.1/mmd_Darwin_arm64.tar.gz"
+      sha256 "637c39dc2dcfd8c600403a7fbf571cffc7731bc75bc84588b9c94c2310f920cf"
 
       def install
         bin.install "mmd"
@@ -31,16 +31,16 @@ class Mmd < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/mrueg/go-mermaid/releases/download/v0.1.0/mmd_Linux_x86_64.tar.gz"
-      sha256 "3f58d3041b82e1c9e6e69a0d2cb0450bad6874aa89574cdbd1c439131b7c5010"
+      url "https://github.com/mrueg/go-mermaid/releases/download/v0.1.1/mmd_Linux_x86_64.tar.gz"
+      sha256 "7f76f5acfbf975e485ed9ec7acdff4dc286a7658c8899bed3a04c131952f5889"
       def install
         bin.install "mmd"
         generate_completions_from_executable(bin/"mmd", "completion")
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/mrueg/go-mermaid/releases/download/v0.1.0/mmd_Linux_arm64.tar.gz"
-      sha256 "6bc44c1036a6c2d639d835557045a91b07a664fac1dc3e0067060c4d566f0f35"
+      url "https://github.com/mrueg/go-mermaid/releases/download/v0.1.1/mmd_Linux_arm64.tar.gz"
+      sha256 "238e6ea21050d42332474177f1ad8d871fbc6231bc8f9718fbd4516cd4f18480"
       def install
         bin.install "mmd"
         generate_completions_from_executable(bin/"mmd", "completion")
