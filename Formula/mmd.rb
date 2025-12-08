@@ -5,13 +5,13 @@
 class Mmd < Formula
   desc "CLI tool to create mermaid diagrams"
   homepage "https://github.com/mrueg/go-mermaid"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mrueg/go-mermaid/releases/download/v0.1.1/mmd_Darwin_x86_64.tar.gz"
-      sha256 "f98299ccf5372a4691d5768b6adaac86b7ec421c1482cfca702ccac5f330369f"
+      url "https://github.com/mrueg/go-mermaid/releases/download/v0.1.2/mmd_Darwin_x86_64.tar.gz"
+      sha256 "0b4c4622a358a172963bdb90a0019e4a80180df20780d8ad2883434d8abe974b"
 
       def install
         bin.install "mmd"
@@ -19,8 +19,8 @@ class Mmd < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mrueg/go-mermaid/releases/download/v0.1.1/mmd_Darwin_arm64.tar.gz"
-      sha256 "637c39dc2dcfd8c600403a7fbf571cffc7731bc75bc84588b9c94c2310f920cf"
+      url "https://github.com/mrueg/go-mermaid/releases/download/v0.1.2/mmd_Darwin_arm64.tar.gz"
+      sha256 "9299adae8bd0cfb11173b473d5df266428c9aaf842ad5a0ace57c3e2a1046d5e"
 
       def install
         bin.install "mmd"
@@ -30,17 +30,17 @@ class Mmd < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/mrueg/go-mermaid/releases/download/v0.1.1/mmd_Linux_x86_64.tar.gz"
-      sha256 "7f76f5acfbf975e485ed9ec7acdff4dc286a7658c8899bed3a04c131952f5889"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/mrueg/go-mermaid/releases/download/v0.1.2/mmd_Linux_x86_64.tar.gz"
+      sha256 "c883f5f20bca40ea34a56d20ba47679ed6fc172402eb3aa161d4bc58bb3fd77b"
       def install
         bin.install "mmd"
         generate_completions_from_executable(bin/"mmd", "completion")
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/mrueg/go-mermaid/releases/download/v0.1.1/mmd_Linux_arm64.tar.gz"
-      sha256 "238e6ea21050d42332474177f1ad8d871fbc6231bc8f9718fbd4516cd4f18480"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/mrueg/go-mermaid/releases/download/v0.1.2/mmd_Linux_arm64.tar.gz"
+      sha256 "843974863e87688297b268b6f31c9bf4a575c04ce3975d2c2c2ee18bed33b031"
       def install
         bin.install "mmd"
         generate_completions_from_executable(bin/"mmd", "completion")
