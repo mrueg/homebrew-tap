@@ -5,21 +5,21 @@
 class GoldmarkLint < Formula
   desc "A Markdown linter written in Go using the goldmark parser"
   homepage "https://github.com/mrueg/goldmark-lint"
-  version "0.2.1"
+  version "0.2.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mrueg/goldmark-lint/releases/download/v0.2.1/goldmark-lint_darwin_amd64.tar.gz"
-      sha256 "e9f9957dc15a209fb75387ad7dc58b60796a2421b265b35b67837115748a2af5"
+      url "https://github.com/mrueg/goldmark-lint/releases/download/v0.2.2/goldmark-lint_darwin_amd64.tar.gz"
+      sha256 "8e0dfd238e9d057f11f94db43552017e545b718453190253dd0f3b1710d0ac5c"
 
       define_method(:install) do
         bin.install "goldmark-lint"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mrueg/goldmark-lint/releases/download/v0.2.1/goldmark-lint_darwin_arm64.tar.gz"
-      sha256 "872aee69e21f805d0dcd1857d3a8dd345c9eeb263af903adda13ffd86ca3047c"
+      url "https://github.com/mrueg/goldmark-lint/releases/download/v0.2.2/goldmark-lint_darwin_arm64.tar.gz"
+      sha256 "3f5ea333746375629f71a15c4c2d7dc8c14b5428c53d76ea7f2ffd7ccfe7562e"
 
       define_method(:install) do
         bin.install "goldmark-lint"
@@ -29,15 +29,15 @@ class GoldmarkLint < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mrueg/goldmark-lint/releases/download/v0.2.1/goldmark-lint_linux_amd64.tar.gz"
-      sha256 "cffa5f0b4dc55263c45174e9137acf756973bae6e2f5afb1b3fe877e3d64e1e5"
+      url "https://github.com/mrueg/goldmark-lint/releases/download/v0.2.2/goldmark-lint_linux_amd64.tar.gz"
+      sha256 "3febbd682b1b6d5b9b8245774aa3ff93c119034d3c67ad65ab200587041a83cc"
       define_method(:install) do
         bin.install "goldmark-lint"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mrueg/goldmark-lint/releases/download/v0.2.1/goldmark-lint_linux_arm64.tar.gz"
-      sha256 "b29a0b10afb98c870450513bcf12ec7d52d2496feacc6b1aee6da29f8dc8cd75"
+      url "https://github.com/mrueg/goldmark-lint/releases/download/v0.2.2/goldmark-lint_linux_arm64.tar.gz"
+      sha256 "a3295b0545280ef193cc6e4ceb15020dcf629ab2b2888e416305c6250b1b9dfc"
       define_method(:install) do
         bin.install "goldmark-lint"
       end
