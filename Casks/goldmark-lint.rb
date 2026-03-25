@@ -3,7 +3,7 @@ cask "goldmark-lint" do
   name "goldmark-lint"
   desc "A Markdown linter written in Go using the goldmark parser"
   homepage "https://github.com/mrueg/goldmark-lint"
-  version "0.4.2"
+  version "0.4.3"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "goldmark-lint" do
   on_macos do
     on_intel do
       url "https://github.com/mrueg/goldmark-lint/releases/download/v#{version}/goldmark-lint_darwin_amd64.tar.gz"
-      sha256 "d4bf5a0506d261b97690c821e5c82c3dd1f790c4e4bde10eb3e65e3f7d2f3815"
+      sha256 "ab08e3dc5269c70951cf79ddb819348e307341ddbb22d421fbc5e0565176bde0"
     end
     on_arm do
       url "https://github.com/mrueg/goldmark-lint/releases/download/v#{version}/goldmark-lint_darwin_arm64.tar.gz"
-      sha256 "9c3a3b1d577884dc5efe259ff42d5962af1c7c21fd2ae21c14152bbf45d8943f"
+      sha256 "fa5b090122c0817661c7380cc7da7746e27bedf4bd66a4e2b7cc79ba9dd693a4"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/mrueg/goldmark-lint/releases/download/v#{version}/goldmark-lint_linux_amd64.tar.gz"
-      sha256 "afb63ac10739713468be59707348bd5ecc705673d92bda548abf492093fc22ca"
+      sha256 "932c5f8837187bc057d322e42ea3d2e26b0a1a9fd61317c2be4105474088ca31"
     end
     on_arm do
       url "https://github.com/mrueg/goldmark-lint/releases/download/v#{version}/goldmark-lint_linux_arm64.tar.gz"
-      sha256 "99bffae1ad2d43982b588037d561e8d883b338d552dfed4104ca3727625f66cc"
+      sha256 "8f3e5b5400b71615b52e7dd8a549d8beeae620d8ab18e40dc8774e91da9e2f54"
     end
   end
 
